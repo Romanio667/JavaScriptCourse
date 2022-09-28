@@ -10,11 +10,9 @@ const personalMovieDB={
     private: false
 };
 
-const a = prompt('What film have you watched last', ''),
-    b=prompt('Your assessment', ''),
-    c = prompt('What film have you watched last', ''),
-    d=prompt('Your assessment', '');
+for (let i=0; i<2; i++) {
+    const a = prompt('What film have you watched last', ''),
+    b=prompt('Your assessment', '');
     personalMovieDB.movies[a]=b;
-    personalMovieDB.movies[c]=d;
-
+}
 console.log(personalMovieDB);
