@@ -75,4 +75,10 @@ arr2.forEach(function(item, i, arr2){
 
 const str = prompt("question", "");
 const products = str.split(", ");
-console.log(products);
+console.log(products.join('; '));
+products.sort();
+
+arr2.sort(compareNum);
+function compareNum(a, b) {
+    return a-b;
+}
