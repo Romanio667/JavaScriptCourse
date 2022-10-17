@@ -1,23 +1,23 @@
 'use strict';
 
-console.log(document.head);
-console.log(document.documentElement);
-console.log(document.body.childNodes);
-console.log(document.body.firstChild);
-console.log(document.body.lastChild);
-console.log(document.body.firstElementChild);
+document.addEventListener('DOMContentLoaded', () => {
+    const box = document.querySelector('box');
 
-console.log(document.querySelector('#current').parentNode.parentNode);
-console.log(document.querySelector('#current').parentElement);
+    box.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        console.log('start');
+        console.log(e.touches);
+        console.log(e.targetTouches);
+        console.log(e.changedTouches);
+    });
 
-console.log(document.querySelector('[data-current="3"]').nextSibling);
-console.log(document.querySelector('[data-current="3"]').previousSibling);
-console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+    box.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        console.log('move');
+    });
 
-for (let node of document.body.childNodes) {
-    if(node.nodeName == '#text') {
-        continue;
-    }
-
-    console.log(node);
-}
+    box.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        console.log('end');
+    });
+});
