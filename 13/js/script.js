@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if(favorite) {
-                console.loh("add favorite film");
+                console.log("add favorite film");
             }
 
             movieDB.movies.push(newFilm);
