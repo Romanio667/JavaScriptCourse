@@ -271,6 +271,7 @@ function postData(form) {
             }
         });
     });
+}
 
     function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');
@@ -295,5 +296,4 @@ function postData(form) {
             closeModal();
         }, 4000);
     }
-
-}});
+});
